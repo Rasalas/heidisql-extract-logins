@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="/res/vendor/picocss/pico.min.css">
+    <link rel="stylesheet" href="/res/vendor/fontawesome/6.6.0-free/css/all.css">
+    <link rel="stylesheet" href="/res/css/style.css">
+</head>
+
+<body>
+    <main class="container-fluid">
+        <article id="dropZone">
+            <div class="dashed-inside">
+                <p>Drag & Drop a file here or click to upload</p>
+                <input type="file" id="fileInput" style="display: none;">
+            </div>
+        </article>
+        <section class="table-container">
+            <table id="dataTable" style="display: none; margin-top: 20px;">
+                <thead>
+                    <tr id="tableHeader">
+                        <th>Folder</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="/res/js/script.js"></script>
+</body>
+
+</html>

@@ -1,31 +1,42 @@
-# Extract Logins from HeidiSQL's settings export
+# Read HeidiSQL Export
 
-## !!! DO NOT RUN THIS ON A PUBLIC SERVER !!!
-Just to be clear - if you run this like this on a public server, everyone can see all your passwords.
+## Discaimer: DON'T TRUST ANYONE!
+
+This is a simple tool that allows you to read the export of HeidiSQL settings. It is not intended to be used in a production environment. It is only for educational purposes. Or if you want to check your own settings.
+
+Please do not use this with bad intentions.  
+Your pillow will always be hot if you do.
+
+![alt text](doc/example.png)
 
 
 ## How to use
 
-### export the txt-file
+### 1. export the txt-file
 In HeidiSQL go to "File > Export settings as File..."
 
-### save exported file to project root
-Put this exported file in the root of this project. Preferably named `heidisql_backup.txt`
+### 2. clone this repository
+Clone this repository to your local machine.
 
-### open project in browser
-now open your browser and navigate to the root of this project.
+### 3. start a local server
+Start a local server in the root of this project.
 
-For me:
-``` 
-http://localhost/test/heidisql
+For example with PHP:
 ```
- 
-### result
-Now all your passwords should be visible in a table like this:
+php -S localhost:80
+```
+or with Python:
+```
+python -m SimpleHTTPServer 80
+```
+or with Node.js:
+```
+http-server -p 80
+```
 
-Folder | Host | User | Password | Port
----|---|---|---|---
-folder/subfolder/conn_name|127.0.0.1| root| 123456789| 3306
-example/projectX|db1.example.com| u_12345| supersecurepassword1| 3306
-example/projectY|db2.example.com| u_54321| 1drowssaperucesrepus| 3306
+### 4. open the page
+Now open your browser and navigate to [localhost:80]() or whatever your terminal says.
 
+### 5. drag and drop the txt-file into the dropzone
+Now drag and drop the txt-file into the dropzone on the page.  
+You should now see your settings.

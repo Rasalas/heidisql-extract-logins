@@ -1,0 +1,62 @@
+
+
+#dropZone {
+    text-align: center;
+    cursor: pointer;
+    padding: 1rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#dropZone.hover {
+    background-color: var(--hover-background-color);
+}
+
+#dropZone .dashed-inside {
+    border: 2px dashed var(--code-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+}
+
+#dropZone .dashed-inside p {
+    margin: 0;
+}
+
+kbd[data-clipboard-text]::after {
+    transition: ease-in-out 0.2s;
+    content: ' \f0c5'; /* Clipboard icon */
+    font-family: 'Font Awesome 6 Free';
+    font-size: 0.8em;
+    color: var(--secondary);
+}
+
+kbd:hover {
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
+}
+
+kbd:hover::after {
+    transition: ease-in-out 0.2s;
+    content: ' \f0c5'; /* Clipboard icon */
+    font-family: 'Font Awesome 6 Free';
+    font-size: 0.8em;
+    color: var(--primary-hover);
+}
+
+/* Klasse für das Checkmark-Icon */
+kbd[data-clipboard-text].copied::after {
+    transition: ease-in-out 0.2s;
+    content: ' \f00c'; /* Checkmark icon */
+    font-family: 'Font Awesome 6 Free';
+    font-size: 0.8em;
+    color: var(--ins-color); /* Farbe des Checkmark-Icons */
+}
+
+@media print {
+    #dropZone {
+        display: none;
+    }
+
+    kbd[data-clipboard-text]::after {
+        content: '';
+    }
+}
