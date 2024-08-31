@@ -1,7 +1,5 @@
 # Read HeidiSQL Export
 
-## Discaimer: DON'T TRUST ANYONE!
-
 This is a simple tool that allows you to read the export of HeidiSQL settings. It is not intended to be used in a production environment. It is only for educational purposes. Or if you want to check your own settings.
 
 Please do not use this with bad intentions.  
