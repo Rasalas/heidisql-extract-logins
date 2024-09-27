@@ -7,8 +7,14 @@ Your pillow will always be hot if you do.
 
 ![alt text](doc/example.png)
 
+## GitHub Pages
 
-## How to use
+The project automatically deploys to GitHub Pages.
+
+**Please DO NOT blindly use it.**  
+This could theoretically be used to steal all your connections and passwords!
+
+## Run it locally
 
 ### 1. export the txt-file
 In HeidiSQL go to "File > Export settings as File..."
@@ -38,3 +44,4 @@ Now open your browser and navigate to [localhost:80]() or whatever your terminal
 ### 5. drag and drop the txt-file into the dropzone
 Now drag and drop the txt-file into the dropzone on the page.  
 You should now see your settings.
+
